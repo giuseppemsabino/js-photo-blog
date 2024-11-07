@@ -9,10 +9,10 @@ fetch('https://jsonplaceholder.typicode.com/photos?_limit=6')
     posts.forEach((post) => {
 
         displayCards.innerHTML +=`
-        <div class="col-4">
-          <div class="card h-100">
+        <div class="col-4 my-3">
+          <div class="card h-100 ">
             <img src="${post.url}" alt="">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+            <p>${post.title}</p>
           </div>
          </div>`
     });

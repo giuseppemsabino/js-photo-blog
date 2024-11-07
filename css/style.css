@@ -1,0 +1,10 @@
+.back-header{
+    background-image: url("../img/wall.png");
+}
+body{
+    background-image: url("../img/cork.png");
+}
+
+.card{
+    border-radius: none;
+}
