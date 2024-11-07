@@ -3,6 +3,11 @@
 }
 body{
     background-image: url("../img/cork.png");
+    font-family: "Edu TAS Beginner", cursive;
+}
+#header-title{
+    font-size: 6rem;
+    font-weight: 900;
 }
 
 .card{
