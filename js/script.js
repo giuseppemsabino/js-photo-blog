@@ -1,4 +1,6 @@
 const displayCards = document.getElementById("cards-display");
+const layoverdisplay = document.getElementById("layover");
+const closeButtonLO = document.getElementById("close-button");
 
 fetch("https://jsonplaceholder.typicode.com/photos?_limit=6")
   .then((res) => res.json())
@@ -19,9 +21,15 @@ fetch("https://jsonplaceholder.typicode.com/photos?_limit=6")
 
     displayCardEl.forEach((cardEl) => {
       cardEl.addEventListener("click", function () {
-        alert("card clicked");
+        layoverdisplay.classList.remove('d-none')
         console.log(this);
       });
     });
+
+    closeButtonLO.addEventListener('click', () => {
+      layoverdisplay.classList.add('d-none');
+    })
+
+
   });
 console.log("test");
