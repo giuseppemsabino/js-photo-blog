@@ -22,12 +22,16 @@ fetch("https://jsonplaceholder.typicode.com/photos?_limit=6")
     displayCardEl.forEach((cardEl) => {
       cardEl.addEventListener("click", function () {
         layoverdisplay.classList.remove('d-none')
-        console.log(this);
+        console.log(cardEl);
+        
+       
+
       });
     });
 
+
     closeButtonLO.addEventListener('click', () => {
-      layoverdisplay.classList.add('d-none');
+      layoverdisplay.classList.add('d-none')
     })
 
 
