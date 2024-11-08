@@ -1,20 +1,27 @@
-const displayCards = document.getElementById('cards-display')
+const displayCards = document.getElementById("cards-display");
 
-fetch('https://jsonplaceholder.typicode.com/photos?_limit=6')
-.then((res) => res.json())
-.then (posts => {
-
+fetch("https://jsonplaceholder.typicode.com/photos?_limit=6")
+  .then((res) => res.json())
+  .then((posts) => {
     console.log(posts);
 
     posts.forEach((post) => {
-
-        displayCards.innerHTML +=`
+      displayCards.innerHTML += `
         <div class="col-4 my-3">
           <div class="card h-100 ">
             <img src="${post.url}"class="p-3" alt="">
             <p class="m-3 fs-5">${post.title}</p>
           </div>
-         </div>`
+         </div>`;
     });
-})
-console.log('test')
+
+    const displayCardEl = document.querySelectorAll("#cards-display .card");
+
+    displayCardEl.forEach((cardEl) => {
+      cardEl.addEventListener("click", function () {
+        alert("card clicked");
+        console.log(this);
+      });
+    });
+  });
+console.log("test");
